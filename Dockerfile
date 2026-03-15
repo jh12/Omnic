@@ -31,4 +31,4 @@ FROM publish AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-ENTRYPOINT ["dotnet", "Omnic.dll"]
+ENTRYPOINT ["./Omnic"]
