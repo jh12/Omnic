@@ -32,4 +32,4 @@ jobs:
     # - name: Format
     #   run: dotnet format --verify-no-changes
     - name: Build
-      run: dotnet build --configuration Release --no-restore --WarnAsError /p:Version=${{ steps.gitversion.outputs.NuGetVersionV2 }}
+      run: dotnet build --configuration Release --no-restore --WarnAsError /p:Version=${{ steps.gitversion.outputs.Major }}.${{ steps.gitversion.outputs.Minor }}.${{ steps.gitversion.outputs.Patch }}-${{ steps.gitversion.outputs.CommitsSinceVersionSource:0000 }}
