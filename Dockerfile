@@ -1,9 +1,9 @@
 # ====== Production ====== #
-FROM mcr.microsoft.com/dotnet/runtime:10.0-noble-chiseled-arm64v8 as final
+FROM mcr.microsoft.com/dotnet/runtime:10.0-noble-chiseled-arm64v8 AS final
 WORKDIR /app
 
 # ====== Build image ====== #
-FROM mcr.microsoft.com/dotnet/sdk:10.0 AS publish
+FROM mcr.microsoft.com/dotnet/sdk:10.0-aot AS publish
 ARG RELEASE_VERSION
 WORKDIR /sln
 
