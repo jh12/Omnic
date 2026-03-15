@@ -3,7 +3,7 @@ on:
   push:
     branches-ignore:
       - main
-      - develop
+      - dev
   pull_request:
 
 jobs:
