@@ -28,11 +28,7 @@ RUN dotnet publish "./src/Omnic/Omnic.csproj" -c Release -p:VersionPrefix=$RELEA
 # ====== Copy to final ====== #
 FROM publish AS final
 
-RUN addgroup --system --gid 1000 netcoregroup \
-&& adduser --system --uid 1000 --ingroup netcoregroup --shell /bin/sh netcoreuser
-
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-USER 1000
 ENTRYPOINT ["dotnet", "Omnic.dll"]
