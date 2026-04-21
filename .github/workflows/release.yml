@@ -47,4 +47,4 @@ jobs:
           ghcr.io/${{ github.repository_owner }}/omnic:${{ steps.gitversion.outputs.Major }}.${{ steps.gitversion.outputs.Minor }}
           ghcr.io/${{ github.repository_owner }}/omnic:${{ steps.gitversion.outputs.Major }}.${{ steps.gitversion.outputs.Minor }}.${{ steps.gitversion.outputs.Patch }}-${{ steps.gitversion.outputs.CommitsSinceVersionSource }}
         build-args: RELEASE_VERSION=${{ steps.gitversion.outputs.Major }}.${{ steps.gitversion.outputs.Minor }}.${{ steps.gitversion.outputs.Patch }}-${{ steps.gitversion.outputs.CommitsSinceVersionSource }}
-        platforms: linux/arm64
+        platforms: linux/amd64
